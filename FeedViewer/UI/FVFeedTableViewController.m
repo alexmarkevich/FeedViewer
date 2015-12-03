@@ -7,7 +7,18 @@
 //
 
 #import "FVFeedTableViewController.h"
+#import "FVObjectManager.h"
+#import "FVResponce.h"
 
 @implementation FVFeedTableViewController
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    [[FVObjectManager sharedManager] getFeed:^(FVResponce *responce) {
+        NSLog(@"%@", responce.status);
+    } failure:^(RKObjectRequestOperation *operation, NSError *error) {
+        
+    }];
+}
 @end

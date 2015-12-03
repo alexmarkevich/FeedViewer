@@ -15,6 +15,13 @@
 		FAB40EB51C1055820081EB18 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAB40EB31C1055820081EB18 /* LaunchScreen.xib */; };
 		FAB40EC11C1055820081EB18 /* FeedViewerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB40EC01C1055820081EB18 /* FeedViewerTests.m */; };
 		FAB40ECF1C1088450081EB18 /* FVFeedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB40ECE1C1088450081EB18 /* FVFeedTableViewController.m */; };
+		FAB40ED61C1095A00081EB18 /* FVResponce.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB40ED51C1095A00081EB18 /* FVResponce.m */; };
+		FAB40ED91C1095BB0081EB18 /* FVPost.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB40ED81C1095BB0081EB18 /* FVPost.m */; };
+		FAB40EDC1C1095CD0081EB18 /* FVComment.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB40EDB1C1095CD0081EB18 /* FVComment.m */; };
+		FAB40EDF1C1095DD0081EB18 /* FVUser.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB40EDE1C1095DD0081EB18 /* FVUser.m */; };
+		FAB40EE31C109A350081EB18 /* FVPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB40EE21C109A350081EB18 /* FVPlace.m */; };
+		FAB40EE61C109E990081EB18 /* FVMappingProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB40EE51C109E990081EB18 /* FVMappingProvider.m */; };
+		FAB40EEA1C10BEC50081EB18 /* FVObjectManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB40EE91C10BEC50081EB18 /* FVObjectManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +51,20 @@
 		FAB40EC01C1055820081EB18 /* FeedViewerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedViewerTests.m; sourceTree = "<group>"; };
 		FAB40ECD1C1088450081EB18 /* FVFeedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FVFeedTableViewController.h; path = UI/FVFeedTableViewController.h; sourceTree = "<group>"; };
 		FAB40ECE1C1088450081EB18 /* FVFeedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FVFeedTableViewController.m; path = UI/FVFeedTableViewController.m; sourceTree = "<group>"; };
+		FAB40ED41C1095A00081EB18 /* FVResponce.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FVResponce.h; path = Models/FVResponce.h; sourceTree = "<group>"; };
+		FAB40ED51C1095A00081EB18 /* FVResponce.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FVResponce.m; path = Models/FVResponce.m; sourceTree = "<group>"; };
+		FAB40ED71C1095BB0081EB18 /* FVPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FVPost.h; path = Models/FVPost.h; sourceTree = "<group>"; };
+		FAB40ED81C1095BB0081EB18 /* FVPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FVPost.m; path = Models/FVPost.m; sourceTree = "<group>"; };
+		FAB40EDA1C1095CD0081EB18 /* FVComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FVComment.h; path = Models/FVComment.h; sourceTree = "<group>"; };
+		FAB40EDB1C1095CD0081EB18 /* FVComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FVComment.m; path = Models/FVComment.m; sourceTree = "<group>"; };
+		FAB40EDD1C1095DD0081EB18 /* FVUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FVUser.h; path = Models/FVUser.h; sourceTree = "<group>"; };
+		FAB40EDE1C1095DD0081EB18 /* FVUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FVUser.m; path = Models/FVUser.m; sourceTree = "<group>"; };
+		FAB40EE11C109A350081EB18 /* FVPlace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FVPlace.h; path = Models/FVPlace.h; sourceTree = "<group>"; };
+		FAB40EE21C109A350081EB18 /* FVPlace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FVPlace.m; path = Models/FVPlace.m; sourceTree = "<group>"; };
+		FAB40EE41C109E990081EB18 /* FVMappingProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FVMappingProvider.h; path = Managers/FVMappingProvider.h; sourceTree = "<group>"; };
+		FAB40EE51C109E990081EB18 /* FVMappingProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FVMappingProvider.m; path = Managers/FVMappingProvider.m; sourceTree = "<group>"; };
+		FAB40EE81C10BEC50081EB18 /* FVObjectManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FVObjectManager.h; path = Managers/FVObjectManager.h; sourceTree = "<group>"; };
+		FAB40EE91C10BEC50081EB18 /* FVObjectManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FVObjectManager.m; path = Managers/FVObjectManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +168,11 @@
 		FAB40ECA1C1080DD0081EB18 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				FAB40EE01C109A200081EB18 /* Place */,
+				FAB40ED31C1095780081EB18 /* User */,
+				FAB40ED21C10956D0081EB18 /* Comment */,
+				FAB40ED11C1095040081EB18 /* Post */,
+				FAB40ED01C1094E30081EB18 /* Responce */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -154,6 +180,9 @@
 		FAB40ECB1C1080E60081EB18 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				FAB40EE71C10BE870081EB18 /* FVObjectManager */,
+				FAB40EE41C109E990081EB18 /* FVMappingProvider.h */,
+				FAB40EE51C109E990081EB18 /* FVMappingProvider.m */,
 			);
 			name = Managers;
 			sourceTree = "<group>";
@@ -165,6 +194,60 @@
 				FAB40ECE1C1088450081EB18 /* FVFeedTableViewController.m */,
 			);
 			name = UI;
+			sourceTree = "<group>";
+		};
+		FAB40ED01C1094E30081EB18 /* Responce */ = {
+			isa = PBXGroup;
+			children = (
+				FAB40ED41C1095A00081EB18 /* FVResponce.h */,
+				FAB40ED51C1095A00081EB18 /* FVResponce.m */,
+			);
+			name = Responce;
+			sourceTree = "<group>";
+		};
+		FAB40ED11C1095040081EB18 /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				FAB40ED71C1095BB0081EB18 /* FVPost.h */,
+				FAB40ED81C1095BB0081EB18 /* FVPost.m */,
+			);
+			name = Post;
+			sourceTree = "<group>";
+		};
+		FAB40ED21C10956D0081EB18 /* Comment */ = {
+			isa = PBXGroup;
+			children = (
+				FAB40EDA1C1095CD0081EB18 /* FVComment.h */,
+				FAB40EDB1C1095CD0081EB18 /* FVComment.m */,
+			);
+			name = Comment;
+			sourceTree = "<group>";
+		};
+		FAB40ED31C1095780081EB18 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				FAB40EDD1C1095DD0081EB18 /* FVUser.h */,
+				FAB40EDE1C1095DD0081EB18 /* FVUser.m */,
+			);
+			name = User;
+			sourceTree = "<group>";
+		};
+		FAB40EE01C109A200081EB18 /* Place */ = {
+			isa = PBXGroup;
+			children = (
+				FAB40EE11C109A350081EB18 /* FVPlace.h */,
+				FAB40EE21C109A350081EB18 /* FVPlace.m */,
+			);
+			name = Place;
+			sourceTree = "<group>";
+		};
+		FAB40EE71C10BE870081EB18 /* FVObjectManager */ = {
+			isa = PBXGroup;
+			children = (
+				FAB40EE81C10BEC50081EB18 /* FVObjectManager.h */,
+				FAB40EE91C10BEC50081EB18 /* FVObjectManager.m */,
+			);
+			name = FVObjectManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,9 +385,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAB40EEA1C10BEC50081EB18 /* FVObjectManager.m in Sources */,
 				FAB40ECF1C1088450081EB18 /* FVFeedTableViewController.m in Sources */,
+				FAB40EE61C109E990081EB18 /* FVMappingProvider.m in Sources */,
 				FAB40EAA1C1055820081EB18 /* AppDelegate.m in Sources */,
+				FAB40ED61C1095A00081EB18 /* FVResponce.m in Sources */,
+				FAB40EDF1C1095DD0081EB18 /* FVUser.m in Sources */,
+				FAB40EDC1C1095CD0081EB18 /* FVComment.m in Sources */,
+				FAB40EE31C109A350081EB18 /* FVPlace.m in Sources */,
 				FAB40EA71C1055820081EB18 /* main.m in Sources */,
+				FAB40ED91C1095BB0081EB18 /* FVPost.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
