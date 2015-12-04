@@ -34,7 +34,8 @@
                                         @"isCheckedIn": @"isCheckedIn",
                                         @"ts": @"ts",
                                         @"distance": @"distance",
-                                        @"likes": @"likes"};
+                                        @"likes": @"likes",
+                                        @"commentsNum": @"commentsNumber"};
     
     [mapping addAttributeMappingsFromDictionary:mappingDictionary];
     [mapping addRelationshipMappingWithSourceKeyPath:@"place" mapping:[self placeMapping]];

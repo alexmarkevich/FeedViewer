@@ -18,6 +18,7 @@
 @property (strong, nonatomic) NSNumber *ts;
 @property (strong, nonatomic) NSNumber *distance;
 @property (strong, nonatomic) NSNumber *likes;
+@property (strong, nonatomic) NSNumber *commentsNumber;
 @property (strong, nonatomic) NSArray *comments;
 @property (strong, nonatomic) FVPlace *place;
 @property (strong, nonatomic) FVUser *author;

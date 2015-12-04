@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E74C52A93C07BDA790417760 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 23CA0537615186F6FBC71EEC /* libPods.a */; };
+		FAA613FC1C11C3140095B302 /* FVPostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA613FB1C11C3140095B302 /* FVPostTableViewCell.m */; };
 		FAB40EA71C1055820081EB18 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB40EA61C1055820081EB18 /* main.m */; };
 		FAB40EAA1C1055820081EB18 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB40EA91C1055820081EB18 /* AppDelegate.m */; };
 		FAB40EB01C1055820081EB18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAB40EAE1C1055820081EB18 /* Main.storyboard */; };
@@ -38,6 +39,8 @@
 		0D786924C70ECA6E2B163ACE /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		23CA0537615186F6FBC71EEC /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B2E4524EFCC14909DB15180 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		FAA613FA1C11C3140095B302 /* FVPostTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FVPostTableViewCell.h; path = UI/FVPostTableViewCell.h; sourceTree = "<group>"; };
+		FAA613FB1C11C3140095B302 /* FVPostTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FVPostTableViewCell.m; path = UI/FVPostTableViewCell.m; sourceTree = "<group>"; };
 		FAB40EA11C1055820081EB18 /* FeedViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FeedViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAB40EA51C1055820081EB18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAB40EA61C1055820081EB18 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -101,6 +104,15 @@
 				9B2E4524EFCC14909DB15180 /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		FAA613F91C11C2E20095B302 /* FVPostTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				FAA613FA1C11C3140095B302 /* FVPostTableViewCell.h */,
+				FAA613FB1C11C3140095B302 /* FVPostTableViewCell.m */,
+			);
+			name = FVPostTableViewCell;
 			sourceTree = "<group>";
 		};
 		FAB40E981C1055820081EB18 = {
@@ -190,6 +202,7 @@
 		FAB40ECC1C1080F20081EB18 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				FAA613F91C11C2E20095B302 /* FVPostTableViewCell */,
 				FAB40ECD1C1088450081EB18 /* FVFeedTableViewController.h */,
 				FAB40ECE1C1088450081EB18 /* FVFeedTableViewController.m */,
 			);
@@ -385,6 +398,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAA613FC1C11C3140095B302 /* FVPostTableViewCell.m in Sources */,
 				FAB40EEA1C10BEC50081EB18 /* FVObjectManager.m in Sources */,
 				FAB40ECF1C1088450081EB18 /* FVFeedTableViewController.m in Sources */,
 				FAB40EE61C109E990081EB18 /* FVMappingProvider.m in Sources */,
