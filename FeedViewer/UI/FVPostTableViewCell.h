@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "FVPost.h"
+#import "TTTAttributedLabel.h"
 
-@interface FVPostTableViewCell : UITableViewCell
+@interface FVPostTableViewCell : UITableViewCell <TTTAttributedLabelDelegate>
 
 - (void)refillWithPost:(FVPost *)post;
 

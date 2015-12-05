@@ -1,1 +1,2 @@
-pod 'RestKit', '~> 0.24.0'
+pod 'RestKit'
+pod 'TTTAttributedLabel'
