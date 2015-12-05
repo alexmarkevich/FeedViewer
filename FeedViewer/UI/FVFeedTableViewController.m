@@ -15,6 +15,8 @@
 @interface FVFeedTableViewController()
 
 @property (strong, nonatomic) NSMutableArray *posts;
+@property (assign, nonatomic) BOOL isFeedLoading;
+@property (assign, nonatomic) BOOL isFeedLoaded;
 
 @end
 
@@ -23,16 +25,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.posts = [NSMutableArray new];
-    self.tableView.estimatedRowHeight = 44.0;
+    self.tableView.estimatedRowHeight = 180.0;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.backgroundColor = [UIColor lightGrayColor];
-    [[FVObjectManager sharedManager] getFeed:^(FVResponce *responce) {
-        NSLog(@"%@", responce.status);
-        [self.posts addObjectsFromArray:responce.data];
-        [self.tableView reloadData];
-    } failure:^(RKObjectRequestOperation *operation, NSError *error) {
-        
-    }];
+    
+    [self updateFeed];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -47,7 +44,48 @@
     }
     FVPost *post = self.posts[indexPath.row];
     [cell refillWithPost:post];
+
+    if (((self.posts.count - indexPath.row) < 10) & !self.isFeedLoading & !self.isFeedLoaded & [tableView visibleCells].count) {
+        NSLog(@"%i", (self.posts.count - indexPath.row));
+        [self loadNextFeedPart];
+    }
+    
     return cell;
+}
+
+- (void)updateFeed {
+    self.isFeedLoading = YES;
+    __weak typeof(self) weakSelf = self;
+    [[FVObjectManager sharedManager] getFeedWithOffset:0 limit:20 success:^(FVResponce *responce) {
+        NSLog(@"%@", responce.status);
+        [weakSelf.posts removeAllObjects];
+        [weakSelf.posts addObjectsFromArray:responce.data];
+        [weakSelf.tableView reloadData];
+        weakSelf.isFeedLoading = NO;
+    } failure:^(RKObjectRequestOperation *operation, NSError *error) {
+        weakSelf.isFeedLoading = NO;
+    }];
+}
+
+- (void)loadNextFeedPart {
+    self.isFeedLoading = YES;
+    __weak typeof(self) weakSelf = self;
+    [[FVObjectManager sharedManager] getFeedWithOffset:(self.posts.count + 1) limit:10 success:^(FVResponce *responce) {
+        NSLog(@"%@", responce.status);
+        weakSelf.isFeedLoading = NO;
+        if (responce.data.count) {
+            [weakSelf.posts addObjectsFromArray:responce.data];
+            [weakSelf.tableView reloadData];
+            if (responce.data.count < 10) {
+                weakSelf.isFeedLoaded = YES;
+            }
+        }
+        else {
+            weakSelf.isFeedLoaded = YES;
+        }
+    } failure:^(RKObjectRequestOperation *operation, NSError *error) {
+        weakSelf.isFeedLoading = NO;
+    }];
 }
 
 @end

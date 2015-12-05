@@ -28,13 +28,15 @@
     return sharedManager;
 }
 
-- (void)getFeed:(void (^)(FVResponce *))success failure:(void (^)(RKObjectRequestOperation *, NSError *))failure {
+- (void)getFeedWithOffset:(NSInteger)offset limit:(NSInteger)limit success:(void (^)(FVResponce *))success failure:(void (^)(RKObjectRequestOperation *, NSError *))failure {
+    
+    [self cancelAllObjectRequestOperationsWithMethod:RKRequestMethodGET matchingPathPattern:@"/api/posts"];
     
     NSDictionary *parameters = @{@"distance" : @"16093.44005584717",
                                   @"lat" : @"53.911641",
-                                  @"limit" : @"20",
+                                  @"limit" : [NSNumber numberWithInteger:limit],
                                   @"lon" : @"27.595961",
-                                  @"offset" : @"0"};
+                                  @"offset" : [NSNumber numberWithInteger:offset]};
     
     [self getObjectsAtPath:@"/api/posts" parameters:parameters success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
         if (success) {

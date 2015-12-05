@@ -13,6 +13,6 @@
 
 + (instancetype)sharedManager;
 
-- (void)getFeed:(void (^)(FVResponce *))success failure:(void (^)(RKObjectRequestOperation *, NSError *))failure;
+- (void)getFeedWithOffset:(NSInteger)offset limit:(NSInteger)limit success:(void (^)(FVResponce *))success failure:(void (^)(RKObjectRequestOperation *, NSError *))failure;
 
 @end
