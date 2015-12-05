@@ -69,7 +69,7 @@
                                                     </state>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8BL-Tp-vwd">
-                                                    <rect key="frame" x="30" y="364" width="31" height="15"/>
+                                                    <rect key="frame" x="38" y="364" width="31" height="15"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -183,7 +183,7 @@
                                                 <constraint firstItem="fpY-h3-ni2" firstAttribute="leading" secondItem="TIF-w4-GZk" secondAttribute="leading" id="U7A-pH-YLq"/>
                                                 <constraint firstItem="apj-MU-Zf1" firstAttribute="leading" secondItem="TIF-w4-GZk" secondAttribute="leading" id="Xt3-Dq-c3v"/>
                                                 <constraint firstItem="ecx-8D-gOc" firstAttribute="leading" secondItem="TIF-w4-GZk" secondAttribute="leading" constant="14" id="YEa-mo-eW4"/>
-                                                <constraint firstItem="8BL-Tp-vwd" firstAttribute="leading" secondItem="ecx-8D-gOc" secondAttribute="trailing" constant="2" id="Zn4-lk-pHw"/>
+                                                <constraint firstItem="8BL-Tp-vwd" firstAttribute="leading" secondItem="ecx-8D-gOc" secondAttribute="trailing" constant="10" id="Zn4-lk-pHw"/>
                                                 <constraint firstAttribute="trailing" secondItem="uMG-1f-1KK" secondAttribute="trailing" id="ZnU-St-x2D"/>
                                                 <constraint firstItem="hHw-Jf-DjU" firstAttribute="leading" secondItem="TIF-w4-GZk" secondAttribute="leading" constant="14" id="Zp4-cL-q6A"/>
                                                 <constraint firstAttribute="trailing" secondItem="4Mc-mO-kJk" secondAttribute="trailing" constant="14" id="aTs-TZ-NMs"/>
