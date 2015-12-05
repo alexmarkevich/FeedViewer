@@ -10,7 +10,6 @@
 #import "FVObjectManager.h"
 #import "FVResponce.h"
 #import "FVPost.h"
-#import "FVPostTableViewCell.h"
 
 @interface FVFeedTableViewController()
 
@@ -25,7 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.posts = [NSMutableArray new];
-    self.tableView.estimatedRowHeight = 180.0;
+    self.tableView.estimatedRowHeight = 200.0;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.backgroundColor = [UIColor lightGrayColor];
     self.refreshControl = [[UIRefreshControl alloc] init];
@@ -47,6 +46,8 @@
     }
     FVPost *post = self.posts[indexPath.row];
     [cell refillWithPost:post];
+    cell.delegate = self;
+    cell.cellIndex = indexPath.row;
 
     if (((self.posts.count - indexPath.row) < 10) & !self.isFeedLoading & !self.isFeedLoaded & [tableView visibleCells].count) {
         NSLog(@"%i", (self.posts.count - indexPath.row));
@@ -90,6 +91,15 @@
     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
         weakSelf.isFeedLoading = NO;
     }];
+}
+
+- (void)likeButtonPressedWithCellIndex:(NSInteger)cellIndex {
+    FVPost *post = self.posts[cellIndex];
+    post.likes = [NSNumber numberWithInteger:[post.likes integerValue] + (post.isLiked ? -1 : 1)];
+    post.isLiked = !post.isLiked;
+    [self.posts removeObjectAtIndex:cellIndex];
+    [self.posts insertObject:post atIndex:cellIndex];
+    [self.tableView reloadData];
 }
 
 @end

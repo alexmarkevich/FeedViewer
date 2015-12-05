@@ -10,7 +10,16 @@
 #import "FVPost.h"
 #import "TTTAttributedLabel.h"
 
+@protocol FVPostTableViewCellDelegate <NSObject>
+
+- (void)likeButtonPressedWithCellIndex:(NSInteger)cellIndex;
+
+@end
+
 @interface FVPostTableViewCell : UITableViewCell <TTTAttributedLabelDelegate>
+
+@property (weak, nonatomic) id <FVPostTableViewCellDelegate> delegate;
+@property (assign, nonatomic) NSInteger cellIndex;
 
 - (void)refillWithPost:(FVPost *)post;
 

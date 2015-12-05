@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FVPostTableViewCell.h"
 
-@interface FVFeedTableViewController : UITableViewController
+@interface FVFeedTableViewController : UITableViewController <FVPostTableViewCellDelegate>
 
 @end

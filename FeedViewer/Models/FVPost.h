@@ -22,5 +22,6 @@
 @property (strong, nonatomic) NSArray *comments;
 @property (strong, nonatomic) FVPlace *place;
 @property (strong, nonatomic) FVUser *author;
+@property (assign, nonatomic) BOOL isLiked;
 
 @end

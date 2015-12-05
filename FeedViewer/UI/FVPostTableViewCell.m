@@ -123,6 +123,14 @@ static NSString * const regularFont = @"Montserrat-Regular";
         [self.commentsLabel addLinkToURL:[NSURL URLWithString:[[comments string] substringWithRange:[value rangeValue]]] withRange:[value rangeValue]];
     }
     [self makeHashtagsAndMentionsClicableInLabel:self.commentsLabel];
+    
+    if (post.isLiked) {
+        [self.likeButton setImage:[UIImage imageNamed:@"likeIconRed"] forState:UIControlStateNormal];
+    }
+    else {
+        [self.likeButton setImage:[UIImage imageNamed:@"likeIcon"] forState:UIControlStateNormal];
+    }
+    
 }
 
 - (void)makeHashtagsAndMentionsClicableInLabel:(TTTAttributedLabel *)label {
@@ -182,4 +190,9 @@ static NSString * const regularFont = @"Montserrat-Regular";
     }
 }
 
+- (IBAction)likeButtonPressed:(id)sender {
+    if ([self.delegate respondsToSelector:@selector(likeButtonPressedWithCellIndex:)]) {
+        [self.delegate likeButtonPressedWithCellIndex:self.cellIndex];
+    }
+}
 @end
