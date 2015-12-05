@@ -28,7 +28,10 @@
     self.tableView.estimatedRowHeight = 180.0;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.backgroundColor = [UIColor lightGrayColor];
-    
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.refreshControl addTarget:self
+                            action:@selector(updateFeed)
+                  forControlEvents:UIControlEventValueChanged];
     [self updateFeed];
 }
 
@@ -62,6 +65,7 @@
         [weakSelf.posts addObjectsFromArray:responce.data];
         [weakSelf.tableView reloadData];
         weakSelf.isFeedLoading = NO;
+        [weakSelf.refreshControl endRefreshing];
     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
         weakSelf.isFeedLoading = NO;
     }];
