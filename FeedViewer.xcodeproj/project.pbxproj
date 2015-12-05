@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		E74C52A93C07BDA790417760 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 23CA0537615186F6FBC71EEC /* libPods.a */; };
+		FAA177551C134F810052234F /* Montserrat-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = FAA177541C134EEE0052234F /* Montserrat-Regular.otf */; };
+		FAA177561C134F860052234F /* Montserrat-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = FAA177531C134EE20052234F /* Montserrat-Bold.otf */; };
 		FAA613FC1C11C3140095B302 /* FVPostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA613FB1C11C3140095B302 /* FVPostTableViewCell.m */; };
 		FAB40EA71C1055820081EB18 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB40EA61C1055820081EB18 /* main.m */; };
 		FAB40EAA1C1055820081EB18 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB40EA91C1055820081EB18 /* AppDelegate.m */; };
@@ -39,6 +41,8 @@
 		0D786924C70ECA6E2B163ACE /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		23CA0537615186F6FBC71EEC /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B2E4524EFCC14909DB15180 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		FAA177531C134EE20052234F /* Montserrat-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.otf"; sourceTree = "<group>"; };
+		FAA177541C134EEE0052234F /* Montserrat-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.otf"; sourceTree = "<group>"; };
 		FAA613FA1C11C3140095B302 /* FVPostTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FVPostTableViewCell.h; path = UI/FVPostTableViewCell.h; sourceTree = "<group>"; };
 		FAA613FB1C11C3140095B302 /* FVPostTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FVPostTableViewCell.m; path = UI/FVPostTableViewCell.m; sourceTree = "<group>"; };
 		FAB40EA11C1055820081EB18 /* FeedViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FeedViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,6 +110,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		FAA177521C134ECC0052234F /* Ressource */ = {
+			isa = PBXGroup;
+			children = (
+				FAA177541C134EEE0052234F /* Montserrat-Regular.otf */,
+				FAA177531C134EE20052234F /* Montserrat-Bold.otf */,
+			);
+			name = Ressource;
+			sourceTree = "<group>";
+		};
 		FAA613F91C11C2E20095B302 /* FVPostTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +151,7 @@
 		FAB40EA31C1055820081EB18 /* FeedViewer */ = {
 			isa = PBXGroup;
 			children = (
+				FAA177521C134ECC0052234F /* Ressource */,
 				FAB40ECC1C1080F20081EB18 /* UI */,
 				FAB40ECB1C1080E60081EB18 /* Managers */,
 				FAB40ECA1C1080DD0081EB18 /* Models */,
@@ -345,6 +359,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAA177561C134F860052234F /* Montserrat-Bold.otf in Resources */,
+				FAA177551C134F810052234F /* Montserrat-Regular.otf in Resources */,
 				FAB40EB01C1055820081EB18 /* Main.storyboard in Resources */,
 				FAB40EB51C1055820081EB18 /* LaunchScreen.xib in Resources */,
 				FAB40EB21C1055820081EB18 /* Images.xcassets in Resources */,

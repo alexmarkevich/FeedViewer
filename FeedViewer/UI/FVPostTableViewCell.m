@@ -10,6 +10,9 @@
 #import <AFNetworking/UIImageView+AFNetworking.h>
 #import "FVComment.h"
 
+static NSString * const boldFont = @"Montserrat-Bold";
+static NSString * const regularFont = @"Montserrat-Regular";
+
 @interface FVPostTableViewCell()
 
 @property (weak, nonatomic) IBOutlet TTTAttributedLabel *checkedInLabel;
@@ -46,14 +49,14 @@
     self.commentsLabel.enabledTextCheckingTypes = NSTextCheckingTypeLink;
 }
 - (void)refillWithPost:(FVPost *)post {
-    
-    NSMutableAttributedString *checkedInLabelText = [[NSMutableAttributedString alloc] initWithString:post.author.nickname attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:15]}];
+
+    NSMutableAttributedString *checkedInLabelText = [[NSMutableAttributedString alloc] initWithString:post.author.nickname attributes:@{NSFontAttributeName : [UIFont fontWithName:boldFont size:14]}];
     NSRange nicknameRange = NSMakeRange(0, post.author.nickname.length);
     NSRange placeNameRange;
     if (post.place.name) {
-        [checkedInLabelText appendAttributedString:[[NSAttributedString alloc] initWithString:@" checked in at " attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:13]}]];
+        [checkedInLabelText appendAttributedString:[[NSAttributedString alloc] initWithString:@" checked in at " attributes:@{NSFontAttributeName : [UIFont fontWithName:regularFont size:13]}]];
         placeNameRange = NSMakeRange(checkedInLabelText.length, post.place.name.length);
-        [checkedInLabelText appendAttributedString:[[NSAttributedString alloc] initWithString:post.place.name attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:15]}]];
+        [checkedInLabelText appendAttributedString:[[NSAttributedString alloc] initWithString:post.place.name attributes:@{NSFontAttributeName : [UIFont fontWithName:regularFont size:14]}]];
     }
     self.checkedInLabel.text = checkedInLabelText;
     
@@ -106,14 +109,15 @@
     }
     
     NSMutableArray *nicknameRangesArray = [NSMutableArray new];
-    NSMutableString *comments = [NSMutableString new];
+    NSMutableAttributedString *comments = [NSMutableAttributedString new];
     for (FVComment *comment in post.comments) {
         [nicknameRangesArray addObject:[NSValue valueWithRange:NSMakeRange(comments.length, comment.user.nickname.length)]];
-        [comments appendFormat:@"%@ %@\n",comment.user.nickname, comment.text];
+        [comments appendAttributedString:[[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@ ", comment.user.nickname] attributes:@{NSFontAttributeName : [UIFont fontWithName:boldFont size:14]}]];
+        [comments appendAttributedString:[[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@\n", comment.text] attributes:@{NSFontAttributeName : [UIFont fontWithName:regularFont size:14]}]];
     }
-    self.commentsLabel.text = comments;
+    self.commentsLabel.text = [comments copy];
     for (NSValue *value in nicknameRangesArray) {
-        [self.commentsLabel addLinkToURL:[NSURL URLWithString:[comments substringWithRange:[value rangeValue]]] withRange:[value rangeValue]];
+        [self.commentsLabel addLinkToURL:[NSURL URLWithString:[[comments string] substringWithRange:[value rangeValue]]] withRange:[value rangeValue]];
     }
     [self makeHashtagsAndMentionsClicableInLabel:self.commentsLabel];
 }
