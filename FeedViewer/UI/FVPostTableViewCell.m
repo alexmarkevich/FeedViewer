@@ -65,8 +65,8 @@ static NSString * const regularFont = @"Montserrat-Regular";
         [self.checkedInLabel addLinkToURL:[NSURL URLWithString:post.place.name] withRange:placeNameRange];
     }
     
-    self.timeLabel.text = [post.ts stringValue];
-    self.distanceLabel.text = [post.distance stringValue];
+    self.timeLabel.text = [self getTimeStringWithSeconds:[post.ts integerValue]];
+    self.distanceLabel.text = [self getDistanceStringWithFeet:[post.distance integerValue]];
     self.locationLabel.text = post.place.land;
     
     self.authorImageView.image = nil;
@@ -138,6 +138,45 @@ static NSString * const regularFont = @"Montserrat-Regular";
 
 - (void)attributedLabel:(TTTAttributedLabel *)label didSelectLinkWithURL:(NSURL *)url {
     NSLog(@"%@", url.description);
+}
+
+- (NSString *)getTimeStringWithSeconds:(NSInteger)seconds {
+    if (seconds < 60) {
+        return [NSString stringWithFormat:@"%is", seconds];
+    }
+    else {
+        if ((seconds /= 60) < 60) {
+            return [NSString stringWithFormat:@"%im", seconds];
+        }
+        else {
+            if ((seconds /= 60) < 24) {
+                return [NSString stringWithFormat:@"%ih", seconds];
+            }
+            else {
+                if ((seconds /= 24) < 7) {
+                    return [NSString stringWithFormat:@"%id", seconds];
+                }
+                else if (seconds < 30) {
+                    return [NSString stringWithFormat:@"%iw", (seconds / 7)];
+                }
+                else if (seconds < 365) {
+                    return [NSString stringWithFormat:@"%iw", (seconds / 30)];
+                }
+                else {
+                    return [NSString stringWithFormat:@"%iy", (seconds / 365)];
+                }
+            }
+        }
+    }
+}
+
+- (NSString *)getDistanceStringWithFeet:(NSInteger)feet {
+    if (feet < 1) {
+        return [NSString stringWithFormat:@"%ift", feet];
+    }
+    else {
+        return [NSString stringWithFormat:@"%imi", feet / 5280];
+    }
 }
 
 @end
