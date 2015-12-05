@@ -35,12 +35,15 @@
     [super awakeFromNib];
     self.authorImageView.layer.masksToBounds = YES;
     self.authorImageView.layer.cornerRadius = self.authorImageView.frame.size.width / 2;
-    self.postTextLabel.enabledTextCheckingTypes = NSTextCheckingTypeLink;
-    self.commentsLabel.enabledTextCheckingTypes = NSTextCheckingTypeLink;
     self.checkedInLabel.delegate = self;
     self.postTextLabel.delegate = self;
     self.commentsLabel.delegate = self;
-    
+    UIColor *linksColor = [UIColor colorWithRed:41/255.0 green:101/255.0 blue:160/255.0 alpha:1];
+    self.checkedInLabel.linkAttributes = @{(id)kCTForegroundColorAttributeName: linksColor};
+    self.postTextLabel.linkAttributes = @{(id)kCTForegroundColorAttributeName: linksColor};
+    self.commentsLabel.linkAttributes = @{(id)kCTForegroundColorAttributeName: linksColor};
+    self.postTextLabel.enabledTextCheckingTypes = NSTextCheckingTypeLink;
+    self.commentsLabel.enabledTextCheckingTypes = NSTextCheckingTypeLink;
 }
 - (void)refillWithPost:(FVPost *)post {
     
