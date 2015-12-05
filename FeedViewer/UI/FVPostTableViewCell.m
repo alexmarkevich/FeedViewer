@@ -29,6 +29,7 @@ static NSString * const regularFont = @"Montserrat-Regular";
 @property (weak, nonatomic) IBOutlet UIButton *commentButton;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *postImageViewHeightConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *spaceBetweenPostImageViewAndCommentLabelConstraint;
+@property (weak, nonatomic) IBOutlet UIImageView *likeImageView;
 
 @end
 
@@ -88,9 +89,11 @@ static NSString * const regularFont = @"Montserrat-Regular";
 
     if ([post.likes integerValue]) {
         self.likesLabel.text = [post.likes stringValue];
+        self.likeImageView.hidden = NO;
     }
     else {
         self.likesLabel.text = nil;
+        self.likeImageView.hidden = YES;
     }
     
     if ([post.commentsNumber integerValue] > 2) {
