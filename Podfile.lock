@@ -24,11 +24,11 @@ PODS:
   - RKValueTransformers (1.1.2)
   - SOCKit (1.1)
   - TransitionKit (2.1.1)
-  - TTTAttributedLabel (1.13.4)
+  - TTTAttributedLabel (1.10.1)
 
 DEPENDENCIES:
   - RestKit
-  - TTTAttributedLabel
+  - TTTAttributedLabel (= 1.10.1)
 
 SPEC CHECKSUMS:
   AFNetworking: cf8e418e16f0c9c7e5c3150d019a3c679d015018
@@ -37,6 +37,6 @@ SPEC CHECKSUMS:
   RKValueTransformers: 66ac5e4f077fdbe3496e792d89eeff4c3eb67701
   SOCKit: c7376ac262bea9115b8f749358f762522a47d392
   TransitionKit: 3a14b6acc7cf2d1dd3e454e24dbad1cfab9a1ef1
-  TTTAttributedLabel: 0a2ac7b2dd726d32a070dafb01446026b11e624f
+  TTTAttributedLabel: c8f3801a6463b9c9b82b0c84c465fdda9751892a
 
 COCOAPODS: 0.38.0

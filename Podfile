@@ -1,2 +1,2 @@
 pod 'RestKit'
-pod 'TTTAttributedLabel'
+pod 'TTTAttributedLabel’, '1.10.1'
