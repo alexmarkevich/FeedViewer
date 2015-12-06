@@ -23,6 +23,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationController.navigationBar.backgroundColor = [UIColor colorWithRed:67/255. green:207/255. blue:206/255. alpha:1.];
+    self.navigationController.navigationBar.titleTextAttributes = @{
+                                                                    NSFontAttributeName:[UIFont fontWithName:@"BlendaScript" size:30],
+                                                                    NSForegroundColorAttributeName: [UIColor whiteColor]
+                                                                    };
+    self.navigationItem.title = @"Vicinity";
+    
+    UIBarButtonItem *leftBarButton = [[UIBarButtonItem alloc] init];
+    UIImage *leftBarButtonImage = [[UIImage imageNamed:@"leftBarButtonIcon"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    [leftBarButton setImage:leftBarButtonImage];
+    self.navigationItem.leftBarButtonItem = leftBarButton;
+    
+    UIBarButtonItem *rightBarButton = [[UIBarButtonItem alloc] init];
+    UIImage *rightBarButtonImage = [[UIImage imageNamed:@"rightBarButtonIcon"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    [rightBarButton setImage:rightBarButtonImage];
+    self.navigationItem.rightBarButtonItem = rightBarButton;
+    
     self.posts = [NSMutableArray new];
     self.tableView.estimatedRowHeight = 200.0;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
@@ -32,6 +49,8 @@
                             action:@selector(updateFeed)
                   forControlEvents:UIControlEventValueChanged];
     [self updateFeed];
+    
+    
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -65,8 +84,8 @@
         [weakSelf.posts removeAllObjects];
         [weakSelf.posts addObjectsFromArray:responce.data];
         [weakSelf.tableView reloadData];
+        [weakSelf.refreshControl performSelector:@selector(endRefreshing) withObject:nil afterDelay:0.1];
         weakSelf.isFeedLoading = NO;
-        [weakSelf.refreshControl endRefreshing];
     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
         weakSelf.isFeedLoading = NO;
     }];

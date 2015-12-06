@@ -11,6 +11,7 @@
 		FAA177551C134F810052234F /* Montserrat-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = FAA177541C134EEE0052234F /* Montserrat-Regular.otf */; };
 		FAA177561C134F860052234F /* Montserrat-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = FAA177531C134EE20052234F /* Montserrat-Bold.otf */; };
 		FAA613FC1C11C3140095B302 /* FVPostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA613FB1C11C3140095B302 /* FVPostTableViewCell.m */; };
+		FAA7FF3D1C13B6BB00F7B021 /* Blenda Script.otf in Resources */ = {isa = PBXBuildFile; fileRef = FAA7FF3C1C13B6B200F7B021 /* Blenda Script.otf */; };
 		FAB40EA71C1055820081EB18 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB40EA61C1055820081EB18 /* main.m */; };
 		FAB40EAA1C1055820081EB18 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB40EA91C1055820081EB18 /* AppDelegate.m */; };
 		FAB40EB01C1055820081EB18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAB40EAE1C1055820081EB18 /* Main.storyboard */; };
@@ -45,6 +46,7 @@
 		FAA177541C134EEE0052234F /* Montserrat-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.otf"; sourceTree = "<group>"; };
 		FAA613FA1C11C3140095B302 /* FVPostTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FVPostTableViewCell.h; path = UI/FVPostTableViewCell.h; sourceTree = "<group>"; };
 		FAA613FB1C11C3140095B302 /* FVPostTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FVPostTableViewCell.m; path = UI/FVPostTableViewCell.m; sourceTree = "<group>"; };
+		FAA7FF3C1C13B6B200F7B021 /* Blenda Script.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Blenda Script.otf"; sourceTree = "<group>"; };
 		FAB40EA11C1055820081EB18 /* FeedViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FeedViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAB40EA51C1055820081EB18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAB40EA61C1055820081EB18 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 		FAA177521C134ECC0052234F /* Ressource */ = {
 			isa = PBXGroup;
 			children = (
+				FAA7FF3C1C13B6B200F7B021 /* Blenda Script.otf */,
 				FAA177541C134EEE0052234F /* Montserrat-Regular.otf */,
 				FAA177531C134EE20052234F /* Montserrat-Bold.otf */,
 			);
@@ -359,6 +362,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAA7FF3D1C13B6BB00F7B021 /* Blenda Script.otf in Resources */,
 				FAA177561C134F860052234F /* Montserrat-Bold.otf in Resources */,
 				FAA177551C134F810052234F /* Montserrat-Regular.otf in Resources */,
 				FAB40EB01C1055820081EB18 /* Main.storyboard in Resources */,

@@ -186,7 +186,7 @@ static NSString * const regularFont = @"Montserrat-Regular";
         return [NSString stringWithFormat:@"%ift", feet];
     }
     else {
-        return [NSString stringWithFormat:@"%imi", feet / 5280];
+        return [NSString stringWithFormat:@"%.1fmi", feet / 5280.];
     }
 }
 

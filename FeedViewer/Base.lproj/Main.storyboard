@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6221" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="sWZ-VN-uyg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6221" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="EqF-QM-btU">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
     </dependencies>
@@ -34,19 +34,19 @@
                                             <rect key="frame" x="14" y="3" width="292" height="430"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y4F-6T-D8l">
-                                                    <rect key="frame" x="89" y="32" width="25" height="11"/>
+                                                    <rect key="frame" x="89" y="35" width="25" height="11"/>
                                                     <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="9"/>
                                                     <color key="textColor" red="0.47058823529999999" green="0.52156862749999999" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3f3-2E-4qF">
-                                                    <rect key="frame" x="134" y="32" width="25" height="11"/>
+                                                    <rect key="frame" x="134" y="35" width="25" height="11"/>
                                                     <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="9"/>
                                                     <color key="textColor" red="0.47058823529999999" green="0.52156862749999999" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Mc-mO-kJk">
-                                                    <rect key="frame" x="253" y="32" width="25" height="11"/>
+                                                    <rect key="frame" x="253" y="35" width="25" height="11"/>
                                                     <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="9"/>
                                                     <color key="textColor" red="0.47058823529411764" green="0.52156862745098043" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -125,13 +125,13 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timeIcon" translatesAutoresizingMaskIntoConstraints="NO" id="X0h-8o-nVg">
-                                                    <rect key="frame" x="78" y="33" width="9" height="10"/>
+                                                    <rect key="frame" x="78" y="36" width="9" height="10"/>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="markerIcon" translatesAutoresizingMaskIntoConstraints="NO" id="moO-ek-lRG">
-                                                    <rect key="frame" x="244" y="33" width="7" height="10"/>
+                                                    <rect key="frame" x="244" y="36" width="7" height="10"/>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="distanceIcon" translatesAutoresizingMaskIntoConstraints="NO" id="ix2-i5-91v">
-                                                    <rect key="frame" x="122" y="33" width="10" height="9"/>
+                                                    <rect key="frame" x="122" y="36" width="10" height="9"/>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uMG-1f-1KK">
                                                     <rect key="frame" x="0.0" y="399" width="292" height="1"/>
@@ -200,7 +200,7 @@
                                                 <constraint firstItem="3f3-2E-4qF" firstAttribute="leading" secondItem="ix2-i5-91v" secondAttribute="trailing" constant="2" id="q9G-4c-coW"/>
                                                 <constraint firstItem="uMG-1f-1KK" firstAttribute="top" secondItem="y4D-Xz-3vw" secondAttribute="bottom" constant="4" id="rCs-Xd-lEh"/>
                                                 <constraint firstItem="apj-MU-Zf1" firstAttribute="top" secondItem="uMG-1f-1KK" secondAttribute="bottom" id="v20-V7-LOu"/>
-                                                <constraint firstItem="4Mc-mO-kJk" firstAttribute="top" secondItem="CVB-yB-XuI" secondAttribute="bottom" id="w96-LP-J8Q"/>
+                                                <constraint firstItem="4Mc-mO-kJk" firstAttribute="top" secondItem="CVB-yB-XuI" secondAttribute="bottom" constant="3" id="w96-LP-J8Q"/>
                                                 <constraint firstAttribute="trailing" secondItem="uV9-q4-sC9" secondAttribute="trailing" constant="14" id="wAr-NB-IAA"/>
                                                 <constraint firstAttribute="trailing" secondItem="hHw-Jf-DjU" secondAttribute="trailing" constant="14" id="xTl-Jv-vNK"/>
                                                 <constraint firstItem="izU-6t-Rnq" firstAttribute="top" secondItem="uMG-1f-1KK" secondAttribute="bottom" id="z1Z-ia-V5J"/>
@@ -250,11 +250,35 @@
                             <outlet property="delegate" destination="sWZ-VN-uyg" id="kgJ-x3-mfl"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="fso-ie-y9T"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2e5-AS-Y6Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-308" y="-486"/>
+            <point key="canvasLocation" x="504" y="-486"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Nfu-Kh-U8R">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EqF-QM-btU" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lYN-tF-Bzd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="BlendaScript" family="Blenda Script" pointSize="30"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="sWZ-VN-uyg" kind="relationship" relationship="rootViewController" id="GVL-pE-AoM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1rv-2O-02b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-64" y="-486"/>
         </scene>
     </scenes>
     <resources>
