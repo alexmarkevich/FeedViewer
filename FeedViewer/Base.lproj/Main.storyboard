@@ -266,6 +266,8 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="lYN-tF-Bzd">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.2627450980392157" green="0.81176470588235294" blue="0.80784313725490198" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.26274509800000001" green="0.81176470590000005" blue="0.80784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="BlendaScript" family="Blenda Script" pointSize="30"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

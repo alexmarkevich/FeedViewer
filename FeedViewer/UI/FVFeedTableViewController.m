@@ -23,7 +23,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationController.navigationBar.backgroundColor = [UIColor colorWithRed:67/255. green:207/255. blue:206/255. alpha:1.];
     self.navigationController.navigationBar.titleTextAttributes = @{
                                                                     NSFontAttributeName:[UIFont fontWithName:@"BlendaScript" size:30],
                                                                     NSForegroundColorAttributeName: [UIColor whiteColor]
