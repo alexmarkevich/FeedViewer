@@ -48,8 +48,6 @@
                             action:@selector(updateFeed)
                   forControlEvents:UIControlEventValueChanged];
     [self updateFeed];
-    
-    
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -67,8 +65,7 @@
     cell.delegate = self;
     cell.cellIndex = indexPath.row;
 
-    if (((self.posts.count - indexPath.row) < 10) & !self.isFeedLoading & !self.isFeedLoaded & [tableView visibleCells].count) {
-        NSLog(@"%i", (self.posts.count - indexPath.row));
+    if (((self.posts.count - indexPath.row) < 10) & !self.isFeedLoading & !self.isFeedLoaded) {
         [self loadNextFeedPart];
     }
     

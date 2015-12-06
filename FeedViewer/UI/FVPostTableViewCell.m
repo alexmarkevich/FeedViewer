@@ -50,7 +50,7 @@ static NSString * const regularFont = @"Montserrat-Regular";
     self.commentsLabel.enabledTextCheckingTypes = NSTextCheckingTypeLink;
 }
 - (void)refillWithPost:(FVPost *)post {
-
+    
     NSMutableAttributedString *checkedInLabelText = [[NSMutableAttributedString alloc] initWithString:post.author.nickname attributes:@{NSFontAttributeName : [UIFont fontWithName:boldFont size:14]}];
     NSRange nicknameRange = NSMakeRange(0, post.author.nickname.length);
     NSRange placeNameRange;
@@ -86,7 +86,7 @@ static NSString * const regularFont = @"Montserrat-Regular";
     else {
         self.postImageViewHeightConstraint.constant = 0;
     }
-
+    
     if ([post.likes integerValue]) {
         self.likesLabel.text = [post.likes stringValue];
         self.likeImageView.hidden = NO;
@@ -153,28 +153,28 @@ static NSString * const regularFont = @"Montserrat-Regular";
 
 - (NSString *)getTimeStringWithSeconds:(NSInteger)seconds {
     if (seconds < 60) {
-        return [NSString stringWithFormat:@"%is", seconds];
+        return [NSString stringWithFormat:@"%zds", seconds];
     }
     else {
         if ((seconds /= 60) < 60) {
-            return [NSString stringWithFormat:@"%im", seconds];
+            return [NSString stringWithFormat:@"%zdm", seconds];
         }
         else {
             if ((seconds /= 60) < 24) {
-                return [NSString stringWithFormat:@"%ih", seconds];
+                return [NSString stringWithFormat:@"%zdh", seconds];
             }
             else {
                 if ((seconds /= 24) < 7) {
-                    return [NSString stringWithFormat:@"%id", seconds];
+                    return [NSString stringWithFormat:@"%zdd", seconds];
                 }
                 else if (seconds < 30) {
-                    return [NSString stringWithFormat:@"%iw", (seconds / 7)];
+                    return [NSString stringWithFormat:@"%zdw", (seconds / 7)];
                 }
                 else if (seconds < 365) {
-                    return [NSString stringWithFormat:@"%iw", (seconds / 30)];
+                    return [NSString stringWithFormat:@"%zdw", (seconds / 30)];
                 }
                 else {
-                    return [NSString stringWithFormat:@"%iy", (seconds / 365)];
+                    return [NSString stringWithFormat:@"%zdy", (seconds / 365)];
                 }
             }
         }
@@ -183,7 +183,7 @@ static NSString * const regularFont = @"Montserrat-Regular";
 
 - (NSString *)getDistanceStringWithFeet:(NSInteger)feet {
     if (feet < 1) {
-        return [NSString stringWithFormat:@"%ift", feet];
+        return [NSString stringWithFormat:@"%zdft", feet];
     }
     else {
         return [NSString stringWithFormat:@"%.1fmi", feet / 5280.];
